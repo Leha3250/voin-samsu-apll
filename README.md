@@ -12,10 +12,10 @@ font1 = font.SysFont('Arial', 80)
 font2 = font.SysFont('Arial', 36)
 win = font1.render('YOU WIN!',True,(255,255,255))
 lose = font1.render('ПРОИГРЫШ',True,(180,5,5))
-# герой
-# враг
-# сбито кораблей
-# пропущено кораблей
+# херой
+# вераг
+# свито хораблей
+# фрофущенно хороблей
 points = 0
 lost = 0
 # класс-родитель для других спрайтов
@@ -73,7 +73,7 @@ class Enemy(GameSprite):
 # Создаем окошко
 win_width = 700
 win_height = 500
-display.set_caption("Космическое вторжение")
+display.set_caption("айфоы атакуют землю а самсунги нас защищают , на авторские права похрен")
 window = display.set_mode((win_width, win_height))
 background = transform.scale(image.load("galaxy.jpg"), (win_width, win_height))
 # создаем спрайты
@@ -128,16 +128,16 @@ while run:
             now_time = timer()
 
             if now_time - last_time < 3:
-                reload = font2.render('Подождите... Телефон зарежается...',1,(255,0,0))
+                reload = font2.render('обнавляю кожуру банана',1,(255,0,0))
                 window.blit(reload, (145, win_height-50))
             else:
                 num_fire = 0
                 rel_time = False
 
-        text_point = font2.render('Счёт: '+str(points),True,(255,255,255))
+        text_point = font2.render('Ценна: '+str(points),True,(255,255,255))
         window.blit(text_point,(10,20))
  
-        text_lost = font2.render('Пропущено: '+str(lost),True,(255,255,255))
+        text_lost = font2.render('Пропущено вызовов от бати: '+str(lost),True,(255,255,255))
         window.blit(text_lost,(10,60))
 
         sprites_list = sprite.groupcollide(iphones, bullets, True, True)
